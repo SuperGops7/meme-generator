@@ -1,6 +1,5 @@
 import React, { cloneElement } from "react"
 import "../style.css"
-import memesData from "../memesData"
 
 export default function Meme() {
     let [meme, setMeme] = React.useState({
