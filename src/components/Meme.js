@@ -6,7 +6,7 @@ export default function Meme() {
     let [meme, setMeme] = React.useState({
         topText: "",
         bottomText: "",
-        randomImage: "https://i.imgflip.com/26am.jpg"
+        randomImage: ""
     })
 
     function handleChange(event) {
@@ -25,8 +25,6 @@ export default function Meme() {
             .then(data => setAllMeme(data.data.memes))
     }, [])
 
-    console.log(allMeme)
-
     function getMemeImage() {
         const memesArray = allMeme
         const randomNumber = Math.floor(Math.random() * memesArray.length)
@@ -38,7 +36,6 @@ export default function Meme() {
                 }
             }
         )
-        console.log(memesArray[randomNumber].url)
     }
 
     return(
